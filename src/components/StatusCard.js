@@ -1,14 +1,19 @@
 import React from "react";
 
-export default function StatusCard({ status }) {
+export default function StatusCard({ status, type = "train" }) {
   let bgColor = "bg-gray-300";
   let text = "Loading...";
   let emoji = "⏳";
 
   if (status === "detected") {
     bgColor = "bg-red-600";
-    text = "Elephant Detected!";
-    emoji = "🚨";
+    if (type === "vehicle") {
+      text = "Vehicle/Elephant Detected!";
+      emoji = "🚗🚨";
+    } else {
+      text = "Elephant Detected!";
+      emoji = "🐘🚨";
+    }
   } else if (status === "clear") {
     bgColor = "bg-green-600";
     text = "Area Clear";

@@ -1,45 +1,44 @@
-/*function App() {
-  return (
-    <div>
-      <h1>Elephant Detection Dashboard</h1>
-    </div>
-  );
-}
-
-export default App;*/
-
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import StatusCard from "./components/StatusCard";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import TrainDetection from "./components/TrainDetection";
+import VehicleDetection from "./components/VehicleDetection";
 
 function App() {
-  const [status, setStatus] = useState("loading");
-
-  useEffect(() => {
-    const fetchStatus = async () => {
-      try {
-        const res = await axios.get("http://<PI_IP>:5000/status"); // Replace <PI_IP> with your Raspberry Pi IP
-        setStatus(res.data.status);
-      } catch (err) {
-        setStatus("error");
-      }
-    };
-
-    fetchStatus();
-    const interval = setInterval(fetchStatus, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold mb-8 text-gray-800">
-        🐘 Night-Time Elephant Detection Dashboard
-      </h1>
-      <StatusCard status={status} />
-      <footer className="mt-12 text-gray-500 text-sm">
-        Powered by Raspberry Pi + AI Detection System
-      </footer>
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        {/* Navigation Bar */}
+        <nav className="bg-white shadow-md p-4">
+          <div className="container mx-auto flex justify-between items-center">
+            <Link to="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600">
+              🐘 ElecSafe System
+            </Link>
+            <div className="flex gap-6">
+              <Link
+                to="/train"
+                className="text-gray-600 hover:text-blue-600 font-semibold transition"
+              >
+                🐘 Train Detection
+              </Link>
+              <Link
+                to="/vehicle"
+                className="text-gray-600 hover:text-green-600 font-semibold transition"
+              >
+                🚗 Vehicle Detection
+              </Link>
+            </div>
+          </div>
+        </nav>
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/train" element={<TrainDetection />} />
+          <Route path="/vehicle" element={<VehicleDetection />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
