@@ -6,7 +6,6 @@ Install: pip install flask flask-cors opencv-python ultralytics requests gpiozer
 
 Run: python vehicle-detection-server.py
 """
-
 from flask import Flask, jsonify
 from flask_cors import CORS
 from gpiozero import LED
