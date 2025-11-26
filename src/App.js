@@ -15,7 +15,7 @@ function Navigation() {
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <div className="logo-icon">🐘</div>
-          <span>ElecSafe Detection System</span>
+          <span>EleSafe Detection System</span>
         </Link>
         <div className="nav-menu">
           <Link

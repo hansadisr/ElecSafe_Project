@@ -17,7 +17,7 @@ function Home() {
         {/* Header Section */}
         <div className="dashboard-header">
           <div>
-            <h1 className="dashboard-title">Welcome to ElecSafe!</h1>
+            <h1 className="dashboard-title">Welcome to EleSafe!</h1>
             <h2 className="dashboard-subtitle">System Overview</h2>
             <p className="dashboard-status">Operational</p>
           </div>

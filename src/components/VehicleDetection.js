@@ -67,7 +67,7 @@ function VehicleDetection() {
         <div className={`status-display ${getStatusColor()}`}>
           <div className="status-icon-large">{getStatusIcon()}</div>
           <h2 className="status-text-large">{getStatusText()}</h2>
-          <p className="status-subtext">Highway Safety Monitoring System</p>
+          <p className="status-subtext">Roadway Safety Monitoring System</p>
         </div>
 
         {/* Stats Grid */}
