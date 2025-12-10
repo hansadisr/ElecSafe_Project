@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import dashboardBg from "../images/dashboard_ui.png";
 
 function Home() {
   const [stats, setStats] = useState({
@@ -12,7 +13,7 @@ function Home() {
   });
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" style={{ backgroundImage: `url(${dashboardBg})` }}>
       <div className="dashboard-content">
         {/* Header Section */}
         <div className="dashboard-header">

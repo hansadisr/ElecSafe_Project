@@ -19,7 +19,8 @@ body {
 
 /* Navigation Bar */
 .navbar {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: rgba(103, 71, 54);
+  backdrop-filter: blur(10px);
   padding: 0.8rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -72,8 +73,8 @@ body {
 }
 
 .nav-button.active-dashboard {
-  background: #3b82f6;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  background: #301712;
+  box-shadow: 0 4px 12px #7a5a50(59, 130, 246, 0.4);
 }
 
 .nav-button.active-train {
@@ -112,6 +113,10 @@ body {
   min-height: calc(100vh - 70px);
   padding: 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .dashboard-content {
@@ -167,27 +172,32 @@ body {
 }
 
 .stat-card-red {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.55) 0%, rgba(220, 38, 38, 0.85) 100%);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .stat-card-teal {
-  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  background: rgba(124, 151, 124, 0.85);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .stat-card-orange {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  background: rgba(186, 90, 71, 0.85);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .stat-card-gray {
-  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.55) 0%, rgba(75, 85, 99, 0.85) 100%);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .stat-icon {
   font-size: 2.5rem;
+  filter: grayscale(100%);
 }
 
 .stat-content {
@@ -220,7 +230,8 @@ body {
 }
 
 .monitoring-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -236,6 +247,7 @@ body {
   font-size: 4rem;
   margin-bottom: 1rem;
   text-align: center;
+  filter: grayscale(100%);
 }
 
 .monitoring-title {
@@ -258,7 +270,7 @@ body {
   gap: 0.5rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
-  color: #059669;
+  color: #012719;
 }
 
 .status-dot {
@@ -268,8 +280,8 @@ body {
 }
 
 .status-active {
-  background: #10b981;
-  box-shadow: 0 0 8px #10b981;
+  background: #012719;
+  box-shadow: 0 0 8px #012719;
 }
 
 .monitoring-button {
@@ -287,22 +299,22 @@ body {
 }
 
 .button-teal {
-  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  background: #301712;
   color: white;
 }
 
 .button-teal:hover {
-  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  background: #1f0e0a;
   transform: scale(1.02);
 }
 
 .button-blue {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: #301712;
   color: white;
 }
 
 .button-blue:hover {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: #1f0e0a;
   transform: scale(1.02);
 }
 
@@ -319,10 +331,18 @@ body {
   min-height: calc(100vh - 70px);
   padding: 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .detection-container.vehicle-theme {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .detection-content {
@@ -340,7 +360,8 @@ body {
 
 /* Status Display */
 .status-display {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 3rem;
   text-align: center;
@@ -350,23 +371,27 @@ body {
 }
 
 .status-detected {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.55) 0%, rgba(220, 38, 38, 0.55) 100%);
+  backdrop-filter: blur(10px);
   color: white;
   animation: pulse 2s infinite;
 }
 
 .status-clear {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.55) 0%, rgba(5, 150, 105, 0.55) 100%);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .status-error {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.55) 0%, rgba(217, 119, 6, 0.55) 100%);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
 .status-loading {
-  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.55) 0%, rgba(75, 85, 99, 0.55) 100%);
+  backdrop-filter: blur(10px);
   color: white;
 }
 
@@ -406,7 +431,8 @@ body {
 }
 
 .detection-stat-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
@@ -433,7 +459,8 @@ body {
 
 /* Detection Log */
 .detection-log {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

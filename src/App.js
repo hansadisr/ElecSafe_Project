@@ -36,13 +36,6 @@ function Navigation() {
           >
             Vehicle Monitor
           </Link>
-          <Link
-            to="/settings"
-            className={`nav-button ${isActive('/settings') ? 'active-settings' : ''}`}
-          >
-            ⚙️ Settings
-          </Link>
-          <div className="user-icon">👤</div>
         </div>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import trainBg from "../images/train_bg.png";
 
 function TrainDetection() {
   const [status, setStatus] = useState("loading");
@@ -59,7 +60,7 @@ function TrainDetection() {
   };
 
   return (
-    <div className="detection-container">
+    <div className="detection-container" style={{ backgroundImage: `url(${trainBg})` }}>
       <div className="detection-content">
         <h1 className="detection-title">🚂 Train & Elephant Monitoring</h1>
         

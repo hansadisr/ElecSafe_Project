@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import vehicleBg from "../images/vehicle_bg.png";
 
 function VehicleDetection() {
   const [status, setStatus] = useState("loading");
@@ -59,7 +60,7 @@ function VehicleDetection() {
   };
 
   return (
-    <div className="detection-container vehicle-theme">
+    <div className="detection-container vehicle-theme" style={{ backgroundImage: `url(${vehicleBg})` }}>
       <div className="detection-content">
         <h1 className="detection-title">🚗 Vehicle & Roadway Monitoring</h1>
         
