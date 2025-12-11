@@ -15,7 +15,7 @@ function VehicleDetection() {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await axios.get("http://10.182.66.142:5001/status");
+        const res = await axios.get("http://192.168.8.185:5001/status");
         setStatus(res.data.status);
         if (res.data.status === "detected") {
           const now = new Date().toLocaleTimeString();
